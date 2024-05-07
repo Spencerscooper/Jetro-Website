@@ -20,9 +20,10 @@ header{
     display: flex;
     align-items: center;
     padding-top: 10rem;
+    background: rgb(0, 0, 250, 0.512);
 }
 .logo{
-    width: 180px;
+    width: 120px;
 }
 .ctn {
     padding: 10px 20px;
@@ -39,8 +40,13 @@ header{
     left: 0;
     display: flex;
     width: 100%;
-    padding: 10px 50px;
+    padding: 0px 50px;
     align-items: center;
+    background: whitesmoke;
+    position: fixed;
+}
+.nav i{
+    color: red;
 }
 .navbar ul{
     flex: 1;
@@ -58,11 +64,12 @@ header{
     
 }
 .navbar ul li a:hover{
-    background: black;
-    color: whitesmoke;
-    border: 2px solid black;
+    color: blue;
     border-radius: 5px;
     border-width: 5px;
+}
+.include{
+    display: none;
 }
 .header-content, .hero-img{
     flex-basis: 50%;
@@ -71,11 +78,12 @@ header{
 .header-content h1{
     font-size: 7vmin;
     margin-bottom: 30px;
-    margin-top: 7rem;
-    color: #4642ff;
+    margin-top: 2rem;
+    color: whitesmoke;
 }
 .header-content p{
     margin-bottom: 30px;
+    color: whitesmoke;
 
 }
 .learnmore{
@@ -94,17 +102,46 @@ header{
 .hero-img img{
     margin-left: 100px;
 }
-
 /* Services */
-.services{
+ .services-content, .services-img{
+   flex-basis: 50%;
+   display: flex;
+}
+.services h1{
+    text-align: center;
+    margin-top: 30px;
+}
+.services-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    grid-gap: 1em;
+}
+
+/* Technologies*/
+.technologies{
     margin-top: 80px;
+    background: darkslateblue;
+    padding-top: 30px;
+}
+.tech-top{
+    /* margin-left: 15rem; */
+    font-size: 6vmin;
+    text-align: center;
+    color: whitesmoke;
+}
+.tech-pragh{
+    /* max-width: 40rem; */
+    margin: 40px 20px;
+    /* font-size: 3; */
+    text-align: center;
+    color: white;
 }
 .container{
     padding: 3rem;
     display: flex;
 }
-.grid-wrapper, .services-content{
-    flex-basis: 50%;
+.grid-wrapper{
+    flex-basis: 100%;
 }
 .grid-box{
     background: darkslategray;
@@ -123,7 +160,8 @@ header{
     width: 80px;
     height: 80px;
     margin-bottom: 20px;
-    animation: scaleup 2s ease-in-out infinite;
+    /* animation: scaleup 2s ease-in-out infinite; */
+    
 }
 .grid-box h1{
     color: whitesmoke;
@@ -135,23 +173,14 @@ header{
 }
 .webdesign{
     background: linear-gradient(to bottom right, rgb(80,80,255),rgb(253,119,119));
-    margin-top: 30px;
+    /* margin-top: 30px; */
 }
 .marketing{
     background: linear-gradient(to bottom right,rgb(255,207,145), rgb(255,111,92));
 }
 .branding{
     background: linear-gradient(to bottom right, #2af598, #009efd);
-    margin-top: 30px;
-}
-.services-content{
-    padding: 3rem;
-    position: relative;
-    
-}
-.services-content h1{
-    font-size: 6vmin;
-    margin-bottom: 30px;
+    /* margin-top: 30px; */
 }
 .hpyclients{
     background: linear-gradient(to bottom right,rgb(107,107,255), blue);
@@ -162,7 +191,7 @@ header{
 .runingprj{
     background: linear-gradient(to bottom right,rgb(255,207,145),rgb(255,111,92));
 }
-.design{
+.designs{
     background: linear-gradient(to bottom right,#2af598,#009efd);
 }
 .numbers .grid-box h2{
@@ -172,6 +201,13 @@ header{
     font-size: 20px;
 }
 /* Numbers */
+.num-wrapper{
+    flex-basis: 50%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    grid-gap: 2em;
+    padding: 2rem;
+}
 .numbers .grid-box h1{
     font-size: 40px;
 }
@@ -206,7 +242,7 @@ header{
 .prj-img{
     height: 150px;
     overflow: hidden;
-    position: relative;
+    /* position: relative; */
 }
 .prj-img img{
     max-height: 100%;
@@ -216,7 +252,7 @@ header{
     font-size: 35px;
 }
 .details{
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     left: 0;
     display: flex;
@@ -224,7 +260,7 @@ header{
     justify-content: space-around;
     min-width: 100%;
     max-height: 150%;
-    background: blue;
+    background: rgb(0, 0, 250, 0.534);
     transform: scaleX(0);
     transition: transform 1s ease-in-out;
 
@@ -252,6 +288,23 @@ header{
     padding: 2rem;
     text-align: center;
     border-radius: 5px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 1s ease-in-out;
+}
+.team-mem:hover{
+    transform: translateY(-20px);
+}
+.team-mem h1{
+    font-size: 30px;
+}
+.team-mem h2{
+    color: darkblue;
+    margin-bottom: 150px;
+    font-size: 20px;
 }
 .team-mem img{
     width: 80px;
@@ -259,14 +312,8 @@ header{
     margin-bottom: 20px;
     border-radius: 50px;
 }
-.mem1{
-    background: linear-gradient(to bottom right,rgb(107,107,255), blue);
-}
-.mem2{
+.team .grid-wrapper{
     background: linear-gradient(to bottom right, rgb(80,80,255),rgb(253,119,119));
-}
-.mem3{
-    background: linear-gradient(to bottom right,rgb(255,207,145),rgb(255,111,92));
 }
 
 
