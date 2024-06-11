@@ -9,7 +9,15 @@ body{
     font-family: sans-serif;
 }
 body h1{
-    color: #282f59;
+    color: black;
+}
+
+p:first-letter{
+    font-size: 10em;
+}
+
+p::backdrop{
+    font-size: larger;
 }
 
 .row {
@@ -21,9 +29,9 @@ body h1{
 
 /*navbar section*/
 
-.topnav {
+.navbar {
     overflow: hidden;
-    background-color: whitesmoke;
+    background-color:whitesmoke;
     position: fixed;
     width: 100%;
   }
@@ -44,7 +52,16 @@ body h1{
   }
 
   .active:hover{
-    background: linear-gradient(to bottom right, rgb(255,111,92), rgb(255,207,145));
+    background: linear-gradient(to bottom right, rgb(255,225,92), rgb(255,207,145));
+  }
+
+  #active:hover{
+    background: linear-gradient(to bottom right, rgb(255,229,92), rgb(255,207,145));
+  }
+
+  #active {
+    background: linear-gradient(to bottom right, rgb(255,207,145), rgb(255,111,92));;
+    color: white;
   }
   
   .navbar .icon {
@@ -353,6 +370,10 @@ body h1{
 .prj-img:hover .details{
     transform: scaleX(1);
 }
+.prj-img img:hover .details{
+    transform: scaleX(1);
+}
+
 /* Team */
 .team{
     margin-top: 80px;
@@ -407,8 +428,156 @@ body h1{
     left: -20%;
     width: 650px;
     animation: scaleup 2s ease-in-out infinite;
-} 
-/* Numbers */
+}
+
+/*ourvalue*/
+
+.coop-foss{
+    width: 50;
+}
+
+.containers{
+    padding: 1rem;
+    display: flex;
+    margin-top: 15%;
+    
+    
+
+}
+
+.containers2{
+    padding: 1rem;
+    display: flex;
+    margin-top: 0%;
+}
+
+.containers h2{
+    color: black;
+}
+
+.margin-top-header{
+    width: 100%;
+    height: 50%;
+    margin-top: 100px;
+}
+
+.pen{
+    width: 50%;
+    height: 100%;
+    float: left;
+    margin-left: 30px;
+}
+
+.header-title{
+    float: right;
+    background-color:whitesmoke;
+    width: 48%;
+    height: 49%;
+    text-align: center;
+    font-size: x-large;
+    margin-left: 50px;
+
+    
+}
+
+.mainheader-title{
+    margin-top: 1px;
+}
+
+.header-title h3{
+    margin-top: 20px;
+}
+
+.header-title h1{
+    color: cadetblue;
+}
+
+.Principles-content{
+    width: 47%;
+    float: right;
+    margin-bottom: 0%;
+    height: 100%;
+    margin-right: 2%;
+    margin-top: 0%;
+}
+
+.Principles-content h2{
+    float: none;
+    margin-bottom: 10%;
+    font-size: xx-large;
+    margin-left: 8%;
+    color: cadetblue;
+}
+
+.justice{
+    width: 51%;
+    margin-top: 0%;
+    height: 100%;
+}
+
+.justice #justice-img{
+    width: 90%;
+    margin-top: 0%;
+    height: 99%;
+}
+
+.Principles-content ol li p{
+    margin-bottom: 17%;
+    font-size: x-large;
+    margin-left: 0%;
+    width: 90%;
+
+
+}
+
+.Principles-content ol li{
+    margin-bottom: 0%;
+    font-size: x-large;
+    margin-left: 10%;
+    width: 90%;
+}
+
+.rows{
+    padding: 1rem;
+    display: block;
+    margin-top: 0%;
+}
+
+.col-left{
+    width: 50%;
+    height: 40%;
+    float: left;
+    padding-left: 2.5%;
+}
+
+.old-programmer{
+    width: 100%;
+    height: 20%;
+}
+
+.coop-foss{
+    width: 47%;
+    background-color: aqua;
+    float:right;
+    margin-right: 3%;
+}
+
+.text-white{
+    margin-left: 5%;
+    margin-bottom: 2%;
+}
+
+.text-header{
+    margin-left: 5%;
+    margin-top: 5%;
+    margin-bottom: 3.3%;
+    font-size: 250%;
+}
+
+.ripped-paper{
+    margin-top: 5%;
+}
+
 
 /* Animations */
 @keyframes scaleup{
@@ -425,7 +594,7 @@ body h1{
 /*Note below here is for mobile devies view only*/
   
 @media screen and (max-width: 600px) {
-    .navbar a:not(:first-child), .about .aboutbtn {
+.navbar a:not(:first-child), .about .aboutbtn {
       display: none;
     }
     .navbar a.icon {
@@ -435,7 +604,7 @@ body h1{
   }
   
 @media screen and (max-width: 600px) {
-    .navbar.responsive {position: relative;}
+    .navbar.responsive {position: fixed;}
     .navbar.responsive .icon {
       position: absolute;
       right: 0;
@@ -603,6 +772,131 @@ body h1{
 
     .details{
         font-size: medium;
+    }
+
+    /*ourvalue*/
+    .header-title{
+        float: none;
+        background-color:whitesmoke;
+        width: 100%;
+        height: 45%;
+        text-align: center;
+        font-size: x-large;
+        margin-left: 0px;
+    }
+
+    .margin-top-header{
+        width: 100%;
+        height:30%;
+        margin-top: 50px;
+    }
+
+    .pen{
+        width: 100%;
+        height: 90%;
+        float: none;
+        margin-left: 0px
+    }
+    
+    .containers{
+        width: 100%;
+        height: 90%;
+        background-color: #2af598;
+    }
+
+    .Principles-content{
+        width: 100%;
+        float: none;
+        margin-bottom: 0%;
+        height: 50%;
+        margin-right: 2%;
+        margin-top: 0%;
+        display: contents;
+    }
+    
+    .Principles-content h2{
+        float: none;
+        margin-bottom: 10%;
+        font-size: xx-large;
+        margin-left: 8%;
+        color: cadetblue;
+    }
+    
+    .justice{
+        width: 100%;
+        margin-top: 0%;
+        height: 100%;
+        display: contents;
+    }
+    
+    .justice #justice-img{
+        width: 90%;
+        margin-top: 0%;
+        height: 35%;
+    }
+    
+    .Principles-content ol li p{
+        margin-bottom: 7%;
+        font-size: x-large;
+        margin-left: 0%;
+        width: 90%;
+        overflow: hidden;
+        
+    
+    }
+    
+    .Principles-content ol li{
+        margin-bottom: 0%;
+        font-size: x-large;
+        margin-left: 10%;
+        width: 90%;
+    }
+
+    .rows{
+        padding: 1rem;
+        display: block;
+        margin-top: 0%;
+    }
+    
+    .col-left{
+        width: 100%;
+        height: 40%;
+        float: none;
+        padding-left: 0%;
+    }
+    
+    .old-programmer{
+        width: 100%;
+        height: 20%;
+    }
+    
+    .coop-foss{
+        width: 100%;
+        background-color: aqua;
+        float:none;
+        margin-right: 3%;
+        overflow: none;
+        text-align: left;
+    }
+    
+    .text-white{
+        margin-left: 5%;
+        margin-bottom: 2%;
+        margin-right: 5%;
+    }
+    
+    .text-header{
+        margin-left: 5%;
+        margin-top: 5%;
+        margin-bottom: 3.3%;
+        font-size: 200%;
+    }
+    
+    .ripped-paper{
+        margin-top: 5%;
+        width: 80%;
+        text-align: left;
+        margin-left: 10%;
     }
 
 
