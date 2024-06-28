@@ -12,13 +12,6 @@ body h1{
     color: black;
 }
 
-p:first-letter{
-    font-size: 10em;
-}
-
-p::backdrop{
-    font-size: larger;
-}
 
 .row {
     display: flex;
@@ -553,6 +546,10 @@ p::backdrop{
 .old-programmer{
     width: 100%;
     height: 20%;
+}
+
+.coop-foss-container{
+    background-color:cornflowerblue;
 }
 
 .coop-foss{
